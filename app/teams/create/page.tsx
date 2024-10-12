@@ -29,6 +29,11 @@ const router = useRouter();
       }
     })
   }
+  useEffect(()=>{
+    if(!user){
+      router.push('/')
+    }
+  },[user])
   return (
     <div className="w-full h-screen">
       <div>
