@@ -69,7 +69,7 @@ const Editor = ({
       data: fileData?.document ? JSON.parse(fileData.document) : rawDocument,
       tools: {
         header: {
-          class: Header,
+          class: Header as any,
           config: {
             placeholder: "Enter a header",
             levels: [1, 2, 3, 4, 5, 6],
@@ -83,7 +83,7 @@ const Editor = ({
           },
         },
         list: {
-          class: List,
+          class: List as any,
           inlineToolbar: true,
           config: {
             defaultStyle: "unordered",
